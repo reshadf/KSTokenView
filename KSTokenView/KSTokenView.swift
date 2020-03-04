@@ -383,7 +383,7 @@ open class KSTokenView: UIView {
    
     open func addRightView(_ view: UIView) {
         _tokenField.rightView = view
-        _tokenField.rightViewMode = .always
+        _tokenField.rightViewMode = .unlessEditing
     }
     
    //MARK: - Common Setup
