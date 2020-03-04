@@ -381,6 +381,10 @@ open class KSTokenView: UIView {
       _commonSetup()
    }
    
+    open func addRightView(_ view: UIView) {
+        _tokenField.addRightView(view)
+    }
+    
    //MARK: - Common Setup
    //__________________________________________________________________________________
    //
