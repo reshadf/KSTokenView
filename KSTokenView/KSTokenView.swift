@@ -664,6 +664,7 @@ open class KSTokenView: UIView {
    //__________________________________________________________________________________
    //
    func tokenFieldDidBeginEditing(_ tokenField: KSTokenField) {
+      tokenField.rightViewMode = .never
       delegate?.tokenViewDidBeginEditing?(self)
       tokenField.tokenize()
       if (minimumCharactersToSearch == 0) {
@@ -672,6 +673,7 @@ open class KSTokenView: UIView {
    }
    
    func tokenFieldDidEndEditing(_ tokenField: KSTokenField) {
+      tokenField.rightViewMode = .always
       delegate?.tokenViewDidEndEditing?(self)
       tokenField.untokenize()
       _hideSearchResults()
